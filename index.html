@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تشفير وفك تشفير</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>موقع تشفير وفك تشفير</h1>
+            <p>قم بتشفير وفك تشفير النصوص بأنواع مختلفة من التشفير</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="encryption-type">
+                <label for="encryptionType">اختر نوع التشفير:</label>
+                <select id="encryptionType">
+                    <option value="base64">Base64</option>
+                    <option value="caesar">Caesar Cipher (شيفرة قيصر)</option>
+                    <option value="vigenere">Vigenère Cipher</option>
+                    <option value="morse">شفرة مورس (Morse Code)</option>
+                    <option value="binary">Binary (ثنائي)</option>
+                    <option value="hex">Hexadecimal (سداسي عشر)</option>
+                    <option value="reverse">Reverse Text (نص معكوس)</option>
+                    <option value="rot13">ROT13</option>
+                    <option value="url">URL Encoding</option>
+                </select>
+            </div>
+            
+            <div class="input-section">
+                <label for="input">أدخل النص:</label>
+                <textarea id="input" rows="5" placeholder="أدخل النص هنا..."></textarea>
+                
+                <div id="keySection" style="display: none;">
+                    <label for="key">المفتاح:</label>
+                    <input type="text" id="key" placeholder="أدخل المفتاح هنا...">
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button id="encryptBtn">تشفير</button>
+                <button id="decryptBtn">فك التشفير</button>
+            </div>
+            
+            <div class="output-section">
+                <label for="output">النتيجة:</label>
+                <div id="output"></div>
+                <button id="copyBtn" class="copy-btn">نسخ النتيجة</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 موقع تشفير وفك تشفير | تم التطوير باستخدام HTML, CSS, و JavaScript</p>
+        </footer>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
